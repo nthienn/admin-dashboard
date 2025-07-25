@@ -55,16 +55,6 @@ axios
                 <!-- <th>Action</th> -->
               </tr>
             </thead>
-            <tfoot>
-              <tr>
-                <th>Text</th>
-                <th>Image</th>
-                <th>Advertiser</th>
-                <th>Status</th>
-                <th>Date</th>
-                <!-- <th>Action</th> -->
-              </tr>
-            </tfoot>
             <tbody>
               <tr v-for="(post, index) in advertisements" :key="index">
                 <td>{{ post.content.text }}</td>
