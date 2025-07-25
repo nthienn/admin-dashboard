@@ -2,6 +2,7 @@
 import { ref } from "vue";
 import axiosClient from "../axios";
 import router from "../router";
+import axios from "axios";
 
 const data = ref({
   email: "",
@@ -9,7 +10,7 @@ const data = ref({
 });
 
 function submit() {
-  axiosClient
+  axios
     .post("http://localhost:8080/api/v1/login", data.value)
     .then((response) => {
       console.log("Login successful:", response.data);
