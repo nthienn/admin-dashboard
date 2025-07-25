@@ -10,7 +10,7 @@ const data = ref({
 
 function submit() {
   axiosClient
-    .post("/login", data.value)
+    .post("http://localhost:8080/api/v1/login", data.value)
     .then((response) => {
       console.log("Login successful:", response.data);
       router.push({ name: "Home" });
