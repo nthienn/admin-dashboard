@@ -59,7 +59,12 @@ axios
               <tr v-for="(post, index) in advertisements" :key="index">
                 <td>{{ post.content.text }}</td>
                 <td>
-                  <img :src="post.image.url" alt="Image" width="50px" />
+                  <img
+                    v-if="post.image && post.image.url"
+                    :src="post.image.url"
+                    alt="Image"
+                    width="50px"
+                  />
                 </td>
                 <td>{{ post.advertiser_id.name }}</td>
                 <td>{{ post.process_id.currentStatus }}</td>
